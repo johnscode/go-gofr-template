@@ -7,6 +7,12 @@ This repo is intended to be a template to build different microservices.
 
 copy configs/.sample.local.env to configs/.env, then change settings as appropriate for your local setup
 
+Depending on the data your microservice will operate on, you will probably want to change the database table 
+and seed values that are included in this template.
+
+If your service will not be a user service, change models/users.go to be whatever model is appropriate for your service. 
+Then be sure to change the files migrations/ to reflect this.
+
 open migrations/20240720174600_create_user_table_and_seeds.go. Scroll down to SeedUsers() and change
 the seed users to have the values you want.
 ```shell
@@ -18,8 +24,8 @@ the seed users to have the values you want.
 ```
 This repo is intended to be a template to build different microservices. I have used a user table as an example.
 Depending on your process, you may choose to handle seeding your database differently, particularly a users
-table. It is bad practice to include passwords in a repository and will cause problems if your service is 
-subject to certain compliance regimes.
+table. _**It is bad practice to include passwords in a repository and will cause problems if your service is 
+subject to certain compliance regimes.**_
 
 ### setting up database seeds and migrations
 
