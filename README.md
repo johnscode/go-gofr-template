@@ -7,6 +7,15 @@ This repo is intended to be a template to build different microservices.
 
 copy configs/.sample.local.env to configs/.env, then change settings as appropriate for your local setup
 
+### Running
+
+```shell
+go run server.go
+```
+You can now point your browser to localhost:3000/health and localhost:3000/users
+
+### Customization
+
 Depending on the data your microservice will operate on, you will probably want to change the database table 
 and seed values that are included in this template.
 
